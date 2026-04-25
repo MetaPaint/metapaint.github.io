@@ -1,0 +1,29 @@
+{
+  "name": "メタペイント編集部 — メタマスクウォレット導入ガイド",
+  "short_name": "メタペイント",
+  "description": "メタマスクウォレットダウンロードから初期設定までの流れを丁寧に解説するガイドで初心者でも安全に利用を始められる内容を提供",
+  "lang": "ja",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#F6851B",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["education", "finance", "utilities"]
+}

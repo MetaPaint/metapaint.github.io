@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Metapaint fox">
+  <title>Metapaint fox icon</title>
+  <!-- Outer ears -->
+  <path d="M10 16 L18 6 L24 18 Z" fill="#E2761B"/>
+  <path d="M54 16 L46 6 L40 18 Z" fill="#E2761B"/>
+  <!-- Inner ears -->
+  <path d="M14 16 L18 10 L21 17 Z" fill="#FFC79A"/>
+  <path d="M50 16 L46 10 L43 17 Z" fill="#FFC79A"/>
+  <!-- Face base -->
+  <path d="M12 22 Q12 14 22 16 Q32 12 42 16 Q52 14 52 22 L52 36 Q52 50 32 56 Q12 50 12 36 Z" fill="#F6851B"/>
+  <!-- Cheek highlight -->
+  <path d="M16 28 Q22 26 26 30 L22 38 Q16 36 16 30 Z" fill="#FFB370" opacity="0.55"/>
+  <path d="M48 28 Q42 26 38 30 L42 38 Q48 36 48 30 Z" fill="#FFB370" opacity="0.55"/>
+  <!-- Snout / muzzle -->
+  <path d="M22 36 Q32 32 42 36 L38 50 Q32 54 26 50 Z" fill="#FFFFFF"/>
+  <!-- Eyes -->
+  <circle cx="23" cy="30" r="2.4" fill="#161616"/>
+  <circle cx="41" cy="30" r="2.4" fill="#161616"/>
+  <!-- Nose -->
+  <path d="M30 40 Q32 38 34 40 Q33 43 32 43 Q31 43 30 40 Z" fill="#161616"/>
+</svg>

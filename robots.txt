@@ -1,0 +1,23 @@
+# robots.txt — metapaint.github.io
+# Last reviewed: 2026-04-25
+
+User-agent: *
+Allow: /
+Disallow: /search
+Disallow: /search/
+Disallow: /?s=
+Disallow: /*?utm_
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+
+# Render-critical assets are explicitly allowed
+Allow: /favicon.svg
+Allow: /og-image.png
+Allow: /twitter-image.png
+Allow: /manifest.webmanifest
+
+# Sitemap reference
+Sitemap: https://metapaint.github.io/sitemap.xml
+
+# Honest crawl-delay for low-resource crawlers (Google ignores this directive)
+Crawl-delay: 1

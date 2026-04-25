@@ -1,0 +1,30 @@
+/* TEAM */
+
+Editor / Author: 佐藤 健一 (Sato Kenichi)
+Role: リサーチエディター / Research Editor
+Domain: Web3ウォレット・暗号資産・ブロックチェーンセキュリティ
+Contact: metapaint [at] gmail.com
+GitHub: https://github.com/metapaint
+X (Twitter): https://x.com/realmetapaint
+Location: 日本 / Japan
+
+/* SITE */
+
+Name: メタペイント編集部 (Metapaint Editorial)
+URL: https://metapaint.github.io/
+Mission: 初心者向けに正確で分かりやすいWeb3ウォレット導入ガイドを提供
+Last update: 2026-04-25
+Doctype: HTML5
+Language: 日本語 (ja-JP)
+Standards: WCAG 2.2 AA, Schema.org / JSON-LD, Open Graph, Twitter Card, ISO 8601
+
+/* THANKS */
+
+Inspired by: Google Search Central documentation, MDN Web Docs, Web.dev,
+W3C Web Accessibility Initiative (WAI), Schema.org community.
+
+/* DISCLOSURE */
+
+This site is an independent informational publication.
+It is NOT affiliated with MetaMask or ConsenSys Software Inc.
+All product names, logos, and brands mentioned are the property of their respective owners.

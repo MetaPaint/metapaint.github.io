@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#F6851B">
+<meta name="format-detection" content="telephone=no">
+
+<title>メタマスクウォレットをダウンロードして利用を始める</title>
+<meta name="description" content="メタマスクウォレットダウンロードから初期設定までの流れを丁寧に解説するガイドで初心者でも安全に利用を始められる内容を提供">
+
+<!-- Robots & snippet preferences -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<!-- Canonical (self-referencing, absolute, HTTPS) -->
+<link rel="canonical" href="https://metapaint.github.io/">
+
+<!-- Language alternates -->
+<link rel="alternate" hreflang="ja" href="https://metapaint.github.io/">
+<link rel="alternate" hreflang="x-default" href="https://metapaint.github.io/">
+
+<!-- Favicon: SVG with transparent background, orange fox -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/svg+xml" sizes="any" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M10 16L18 6 24 18Z' fill='%23E2761B'/><path d='M54 16L46 6 40 18Z' fill='%23E2761B'/><path d='M14 16L18 10 21 17Z' fill='%23FFC79A'/><path d='M50 16L46 10 43 17Z' fill='%23FFC79A'/><path d='M12 22Q12 14 22 16Q32 12 42 16Q52 14 52 22L52 36Q52 50 32 56Q12 50 12 36Z' fill='%23F6851B'/><path d='M22 36Q32 32 42 36L38 50Q32 54 26 50Z' fill='%23fff'/><circle cx='23' cy='30' r='2.4' fill='%23161616'/><circle cx='41' cy='30' r='2.4' fill='%23161616'/><path d='M30 40Q32 38 34 40Q33 43 32 43Q31 43 30 40Z' fill='%23161616'/></svg>">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="mask-icon" href="/favicon.svg" color="#F6851B">
+
+<!-- PWA manifest -->
+<link rel="manifest" href="/manifest.webmanifest">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="メタペイント編集部">
+<meta property="og:title" content="メタマスクウォレットをダウンロードして利用を始める">
+<meta property="og:description" content="メタマスクウォレットダウンロードから初期設定までの流れを丁寧に解説するガイドで初心者でも安全に利用を始められる内容を提供">
+<meta property="og:url" content="https://metapaint.github.io/">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://metapaint.github.io/og-image.png">
+<meta property="og:image:secure_url" content="https://metapaint.github.io/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="メタマスクウォレット導入ガイド メタペイント編集部">
+<meta property="article:published_time" content="2026-04-25T09:00:00+09:00">
+<meta property="article:modified_time" content="2026-04-25T09:00:00+09:00">
+<meta property="article:author" content="https://metapaint.github.io/#author">
+<meta property="article:section" content="ウォレット導入ガイド">
+<meta property="article:tag" content="メタマスク">
+<meta property="article:tag" content="メタマスク ログイン">
+<meta property="article:tag" content="メタマスク ダウンロード">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@realmetapaint">
+<meta name="twitter:creator" content="@realmetapaint">
+<meta name="twitter:title" content="メタマスクウォレットをダウンロードして利用を始める">
+<meta name="twitter:description" content="メタマスクウォレットダウンロードから初期設定までの流れを丁寧に解説するガイドで初心者でも安全に利用を始められる内容を提供">
+<meta name="twitter:image" content="https://metapaint.github.io/twitter-image.png">
+<meta name="twitter:image:alt" content="メタマスクウォレット導入ガイド メタペイント編集部">
+
+<!-- Author / publisher meta -->
+<meta name="author" content="佐藤 健一 - メタペイント編集部">
+<meta name="publisher" content="メタペイント編集部">
+<meta name="copyright" content="メタペイント編集部">
+
+<!-- Resource hints (none used: zero external dependencies for fastest LCP) -->
+
+<!-- Structured data: BlogPosting + Organization + WebSite + BreadcrumbList + ProfilePage+Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://metapaint.github.io/#website",
+      "url": "https://metapaint.github.io/",
+      "name": "メタペイント編集部",
+      "inLanguage": "ja",
+      "publisher": { "@id": "https://metapaint.github.io/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://metapaint.github.io/#organization",
+      "name": "メタペイント編集部",
+      "url": "https://metapaint.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://metapaint.github.io/favicon.svg",
+        "width": 64,
+        "height": 64
+      },
+      "email": "metapaint@gmail.com",
+      "sameAs": [
+        "https://github.com/metapaint",
+        "https://x.com/realmetapaint"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://metapaint.github.io/#author",
+      "name": "佐藤 健一",
+      "url": "https://metapaint.github.io/#about-author",
+      "image": "https://metapaint.github.io/favicon.svg",
+      "jobTitle": "ブロックチェーン分野のリサーチエディター",
+      "description": "Web3ウォレットおよび暗号資産分野で6年以上の編集・検証経験を持ち、初心者向けに正確で分かりやすい導入ガイドを継続的に執筆している。",
+      "knowsAbout": ["メタマスク", "Web3ウォレット", "暗号資産", "ブロックチェーンセキュリティ"],
+      "sameAs": [
+        "https://github.com/metapaint",
+        "https://x.com/realmetapaint"
+      ],
+      "worksFor": { "@id": "https://metapaint.github.io/#organization" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://metapaint.github.io/#profilepage",
+      "mainEntity": { "@id": "https://metapaint.github.io/#author" },
+      "dateCreated": "2026-04-25",
+      "dateModified": "2026-04-25"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://metapaint.github.io/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://metapaint.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "メタマスクウォレットをダウンロードして利用を始める"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://metapaint.github.io/#article",
+      "isPartOf": { "@id": "https://metapaint.github.io/#website" },
+      "mainEntityOfPage": "https://metapaint.github.io/",
+      "headline": "メタマスクウォレットをダウンロードして利用を始める",
+      "description": "メタマスクウォレットダウンロードから初期設定までの流れを丁寧に解説するガイドで初心者でも安全に利用を始められる内容を提供",
+      "inLanguage": "ja",
+      "image": [
+        "https://metapaint.github.io/og-image.png",
+        "https://metapaint.github.io/twitter-image.png"
+      ],
+      "datePublished": "2026-04-25T09:00:00+09:00",
+      "dateModified": "2026-04-25T09:00:00+09:00",
+      "author": { "@id": "https://metapaint.github.io/#author" },
+      "publisher": { "@id": "https://metapaint.github.io/#organization" },
+      "breadcrumb": { "@id": "https://metapaint.github.io/#breadcrumb" },
+      "keywords": ["メタマスク", "メタマスク ログイン", "メタマスク ダウンロード"],
+      "articleSection": "ウォレット導入ガイド"
+    }
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   Critical inline CSS — sıfır harici stil/script.
+   Renk paleti WCAG 2.2 AA kontrastı sağlayacak şekilde seçildi:
+   --text (#161616) / --bg (#fff) = 15.7:1
+   --muted (#5b626d) / --bg (#fff) = 4.8:1
+   --primary (#f6851b) zemininde --text (#161616) = 7.9:1
+   --link (#b04500) / --bg (#fff) = 5.9:1
+   ============================================================ */
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #fbf7f2;
+  --bg-card: #fff7eb;
+  --text: #161616;
+  --muted: #5b626d;
+  --border: #d8d8d8;
+  --border-strong: #6e6e6e;
+  --primary: #f6851b;
+  --primary-hover: #d96f12;
+  --primary-deep: #b04500;
+  --link: #b04500;
+  --success: #056635;
+  --warning-bg: #fff4d6;
+  --warning-border: #b27300;
+  --warning-text: #4a2f00;
+  --danger-bg: #fde8ea;
+  --danger-border: #b3001b;
+  --danger-text: #5b000d;
+  --focus: #00529b;
+  --shadow: 0 6px 18px rgba(20, 20, 20, 0.08);
+  --radius: 10px;
+  --maxw: 760px;
+  --container-pad: clamp(16px, 4vw, 28px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", "Meiryo", "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+}
+.skip-link:focus {
+  position: fixed;
+  left: 12px;
+  top: 12px;
+  width: auto;
+  height: auto;
+  padding: 12px 16px;
+  background: #ffffff;
+  color: var(--text);
+  border: 2px solid var(--focus);
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+}
+
+/* Focus visible — WCAG ≥3:1 */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.site-header__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 14px var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 17px;
+  min-height: 48px;
+  padding: 4px 0;
+}
+.brand:focus-visible { outline-offset: 4px; }
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+}
+.brand-name { line-height: 1.2; }
+.brand-name small {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Main wrapper */
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 28px var(--container-pad) 48px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.breadcrumb li { display: inline-flex; align-items: center; gap: 6px; }
+.breadcrumb li + li::before {
+  content: "›";
+  color: var(--muted);
+  margin-right: 2px;
+}
+.breadcrumb a { color: var(--link); }
+.breadcrumb [aria-current="page"] {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Article meta */
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+.article-meta time { color: var(--text); }
+.article-meta a { color: var(--link); }
+
+/* Title */
+h1 {
+  font-size: clamp(26px, 5.2vw, 36px);
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin: 6px 0 18px;
+  color: var(--text);
+}
+
+/* Lead */
+.lead {
+  font-size: 17px;
+  line-height: 1.95;
+  margin: 0 0 22px;
+}
+
+/* Hero card */
+.hero-card {
+  background: var(--bg-card);
+  border: 1px solid #f4d3a5;
+  border-left: 6px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin: 0 0 28px;
+}
+.hero-card h2 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  border: 0;
+  padding: 0;
+}
+.hero-card p { margin: 0; font-size: 16px; }
+
+/* Table of contents */
+nav.toc {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 0 0 32px;
+}
+nav.toc h2 {
+  font-size: 16px;
+  margin: 0 0 10px;
+  border: 0;
+  padding: 0;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+nav.toc ol {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 15px;
+  line-height: 1.95;
+}
+nav.toc a {
+  color: var(--link);
+  display: inline-block;
+  min-height: 30px;
+}
+
+/* Headings */
+h2 {
+  font-size: clamp(20px, 3.6vw, 24px);
+  line-height: 1.4;
+  margin: 40px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary);
+  font-weight: 700;
+}
+h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 28px 0 10px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Section summary box */
+.summary-box {
+  background: var(--bg-soft);
+  border-left: 4px solid var(--primary);
+  padding: 12px 16px;
+  margin: 12px 0 18px;
+  border-radius: 4px;
+  font-size: 15.5px;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 16px 0 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  min-width: 480px;
+}
+caption {
+  font-size: 14px;
+  color: var(--muted);
+  caption-side: bottom;
+  text-align: left;
+  padding: 8px 12px;
+}
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+th {
+  background: var(--bg-soft);
+  font-weight: 700;
+  color: var(--text);
+}
+tr:last-child td { border-bottom: 0; }
+
+/* Lists */
+ol.steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 22px;
+}
+ol.steps > li {
+  counter-increment: step;
+  position: relative;
+  padding: 14px 14px 14px 56px;
+  margin: 0 0 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+ol.steps > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+}
+ol.steps strong { display: block; margin-bottom: 4px; }
+
+/* Callouts */
+.callout {
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  margin: 16px 0 22px;
+  font-size: 15.5px;
+  line-height: 1.85;
+}
+.callout strong { display: block; margin-bottom: 4px; font-weight: 700; }
+.callout--warning {
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+  color: var(--warning-text);
+}
+.callout--danger {
+  background: var(--danger-bg);
+  border: 1px solid var(--danger-border);
+  color: var(--danger-text);
+}
+.callout--info {
+  background: #e6f0fa;
+  border: 1px solid #2c5b94;
+  color: #0e2640;
+}
+
+/* CTA button */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 12px 22px;
+  background: var(--primary);
+  color: var(--text);
+  font-weight: 800;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid var(--primary-deep);
+  cursor: pointer;
+}
+.cta:hover { background: var(--primary-hover); text-decoration: underline; }
+.cta:focus-visible { outline-offset: 3px; }
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0 8px;
+}
+
+/* FAQ — native <details> */
+.faq details {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  margin-bottom: 10px;
+}
+.faq details[open] { background: var(--bg-soft); }
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 48px 14px 16px;
+  font-weight: 700;
+  font-size: 16px;
+  position: relative;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-soft);
+  border: 1px solid var(--border-strong);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
+.faq details[open] summary::after { content: "−"; background: var(--primary); border-color: var(--primary-deep); }
+.faq .faq-body { padding: 0 16px 16px; line-height: 1.85; }
+
+/* Author bio */
+.author-bio {
+  margin: 36px 0 0;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.author-avatar {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+}
+.author-bio h2 {
+  border: 0;
+  padding: 0;
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+.author-bio p { margin: 4px 0; font-size: 15px; }
+.author-bio .author-meta { color: var(--muted); font-size: 14px; }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-soft);
+  margin-top: 40px;
+}
+.site-footer__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 24px var(--container-pad);
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.85;
+}
+.site-footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.site-footer a {
+  color: var(--link);
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+}
+.site-footer button.linklike {
+  background: none;
+  border: 0;
+  color: var(--link);
+  text-decoration: underline;
+  font: inherit;
+  padding: 6px 0;
+  min-height: 44px;
+  cursor: pointer;
+}
+.site-footer button.linklike:hover { text-decoration-thickness: 2px; }
+.site-footer .copy { color: var(--muted); margin-top: 8px; }
+.site-footer .legal-disclaimer {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13.5px;
+}
+
+/* Modal (native <dialog>) */
+dialog {
+  border: 0;
+  padding: 0;
+  border-radius: 12px;
+  max-width: 720px;
+  width: calc(100% - 24px);
+  max-height: 85vh;
+  margin: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  background: var(--bg);
+  color: var(--text);
+}
+dialog::backdrop { background: rgba(0, 0, 0, 0.55); }
+.dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+}
+.dialog-head h2 {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 18px;
+}
+.dialog-close {
+  appearance: none;
+  background: var(--bg-soft);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+}
+.dialog-close:hover { background: var(--primary); border-color: var(--primary-deep); }
+.dialog-body {
+  padding: 16px 20px 20px;
+  overflow-y: auto;
+  max-height: calc(85vh - 60px);
+  font-size: 15.5px;
+  line-height: 1.85;
+}
+.dialog-body h3 {
+  font-size: 16px;
+  margin: 18px 0 8px;
+}
+.dialog-body p, .dialog-body li { margin: 6px 0; }
+.dialog-body ul { padding-left: 1.3em; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* Responsive container width up */
+@media (min-width: 720px) {
+  body { font-size: 17px; }
+  main { padding-top: 36px; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">本文へスキップ</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="/" aria-label="メタペイント編集部 トップページ">
+      <svg class="brand-logo" viewBox="0 0 64 64" width="36" height="36" aria-hidden="true" focusable="false">
+        <path d="M10 16L18 6 24 18Z" fill="#E2761B"/>
+        <path d="M54 16L46 6 40 18Z" fill="#E2761B"/>
+        <path d="M14 16L18 10 21 17Z" fill="#FFC79A"/>
+        <path d="M50 16L46 10 43 17Z" fill="#FFC79A"/>
+        <path d="M12 22Q12 14 22 16Q32 12 42 16Q52 14 52 22L52 36Q52 50 32 56Q12 50 12 36Z" fill="#F6851B"/>
+        <path d="M22 36Q32 32 42 36L38 50Q32 54 26 50Z" fill="#FFFFFF"/>
+        <circle cx="23" cy="30" r="2.4" fill="#161616"/>
+        <circle cx="41" cy="30" r="2.4" fill="#161616"/>
+        <path d="M30 40Q32 38 34 40Q33 43 32 43Q31 43 30 40Z" fill="#161616"/>
+      </svg>
+      <span class="brand-name">
+        メタペイント編集部
+        <small>Web3ウォレット導入ガイド</small>
+      </span>
+    </a>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <ol class="breadcrumb" aria-label="パンくずリスト">
+    <li><a href="/">ホーム</a></li>
+    <li aria-current="page">メタマスクウォレットをダウンロードして利用を始める</li>
+  </ol>
+
+  <article>
+
+    <h1>メタマスクウォレットをダウンロードして利用を始める</h1>
+
+    <div class="article-meta">
+      <span>公開日：<time datetime="2026-04-25">2026年4月25日</time></span>
+      <span>最終更新：<time datetime="2026-04-25">2026年4月25日</time></span>
+      <span>執筆：<a href="#about-author">佐藤 健一</a></span>
+      <span>所要時間：約10分</span>
+    </div>
+
+    <p class="lead">
+      メタマスク（MetaMask）は、ブラウザ拡張機能とモバイルアプリで利用できる代表的な暗号資産ウォレットで、Web3サービスやNFTマーケットプレイスへの接続にも使われます。本記事では、メタマスクのダウンロード方法、ブラウザ拡張機能とモバイルアプリそれぞれのインストール手順、初回起動時のウォレット作成と初期設定、シードフレーズの安全な保管、そして日常的なメタマスク ログインの流れまでを、初めての方でも迷わないように一つずつ順を追って解説します。最初に押さえてほしいのは、ダウンロードは必ず公式サイト metamask.io と公式ストアから行うという一点です。検索結果や広告に表示される偽サイトを避けるための具体的な見分け方も後半で取り上げます。
+    </p>
+
+    <section class="hero-card" aria-label="この記事の要点">
+      <h2>この記事の要点</h2>
+      <p>メタマスク ダウンロードは <strong>公式サイト metamask.io</strong>、<strong>Chrome ウェブストア</strong>、<strong>App Store / Google Play</strong> の三経路に限定する。シードフレーズは画面に表示された瞬間からオフラインでのみ管理する。日常のメタマスク ログインはアプリまたは拡張機能のローカルパスワードで行い、シードフレーズの再入力は復元時のみ必要になる。</p>
+    </section>
+
+    <nav class="toc" aria-label="目次">
+      <h2>目次</h2>
+      <ol>
+        <li><a href="#what-is-metamask">メタマスクとは何か、なぜ必要なのか？</a></li>
+        <li><a href="#where-to-download">メタマスクはどこからダウンロードすべきか？</a></li>
+        <li><a href="#install-extension">ブラウザ拡張機能をインストールする手順は？</a></li>
+        <li><a href="#install-mobile">モバイルアプリをインストールする手順は？</a></li>
+        <li><a href="#initial-setup">ウォレット作成と初期設定の流れは？</a></li>
+        <li><a href="#seed-phrase">シードフレーズはどう保管すべきか？</a></li>
+        <li><a href="#login">メタマスク ログインはどう行うのか？</a></li>
+        <li><a href="#safety">安全に利用するための注意点は何か？</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+      </ol>
+    </nav>
+
+    <section id="what-is-metamask">
+      <h2>メタマスクとは何か、なぜ必要なのか？</h2>
+      <p class="summary-box">メタマスクは、イーサリアム互換のブロックチェーン上で資産を管理し、分散型アプリケーション（dApps）に接続するためのソフトウェアウォレットです。秘密鍵はユーザーの端末にのみ保存され、運営者が預かることはありません。</p>
+
+      <p>メタマスクは2016年にConsenSys関連の開発チームによって公開されて以来、ブラウザでイーサリアムやEVM互換チェーンを利用する際の事実上の標準ウォレットとして広く採用されてきました。本人確認やアカウント開設は不要で、インストールしてシードフレーズを生成した瞬間にウォレットが利用可能になります。一方で、運営者が秘密鍵を保管しないということは、ユーザー自身が鍵の管理責任を負うという意味でもあります。本記事では、この自己管理型ウォレット特有の責任を踏まえ、最初の一歩を安全に踏み出すための実務手順を整理します。</p>
+
+      <h3>カストディアル取引所との違い</h3>
+      <p>国内の暗号資産取引所が「カストディアル（運営者が秘密鍵を預かる）」であるのに対し、メタマスクは「ノンカストディアル」です。取引所のパスワードを忘れても本人確認で再発行できますが、メタマスクの場合はシードフレーズを失うと誰にも復元できません。逆に言えば、運営側からの凍結や引き出し制限が原則として発生しないという特性があります。両者は競合ではなく役割が異なるため、取引所からメタマスクへの送金、メタマスクからdAppsへの接続という二段構えで使われるのが一般的です。</p>
+    </section>
+
+    <section id="where-to-download">
+      <h2>メタマスクはどこからダウンロードすべきか？</h2>
+      <p class="summary-box">公式入手経路は次の三つだけです。<strong>metamask.io</strong>、<strong>Chrome ウェブストア／Firefox Add-ons／Edge Add-ons</strong>、そして<strong>App Store／Google Play</strong>。それ以外のリンク、SNSのDM、検索広告に紛れた類似ドメインからは絶対にダウンロードしないでください。</p>
+
+      <div class="cta-row">
+        <a class="cta" href="https://metamask.io/download/" rel="noopener noreferrer external" target="_blank">公式サイト metamask.io を開く</a>
+      </div>
+
+      <div class="table-wrap" role="region" aria-label="メタマスクの入手経路一覧">
+        <table>
+          <caption>メタマスクの正規ダウンロード経路（2026年4月時点で確認）</caption>
+          <thead>
+            <tr>
+              <th scope="col">プラットフォーム</th>
+              <th scope="col">入手経路</th>
+              <th scope="col">確認ポイント</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Chrome / Brave</th>
+              <td>Chrome ウェブストア</td>
+              <td>提供元が「MetaMask」、ユーザー数が数千万単位、検証バッジ表示</td>
+            </tr>
+            <tr>
+              <th scope="row">Firefox</th>
+              <td>Firefox Browser ADD-ONS（addons.mozilla.org）</td>
+              <td>「Recommended」表示、開発元 MetaMask</td>
+            </tr>
+            <tr>
+              <th scope="row">Microsoft Edge</th>
+              <td>Edge Add-ons</td>
+              <td>「Microsoft 検証済みパブリッシャー」表示</td>
+            </tr>
+            <tr>
+              <th scope="row">iPhone / iPad</th>
+              <td>App Store</td>
+              <td>提供元 ConsenSys Software Inc.</td>
+            </tr>
+            <tr>
+              <th scope="row">Android</th>
+              <td>Google Play</td>
+              <td>提供元 ConsenSys Software Inc.、編集者のおすすめバッジ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--danger" role="note">
+        <strong>偽サイト・偽拡張機能への警告</strong>
+        検索結果の最上部に表示される広告枠や、SNSで送られてくる「公式」を名乗るリンクは、実際には類似ドメインの偽サイトであることがあります。URLが <code>metamask.io</code> 以外の場合、ダウンロードボタンを押す前に必ずブラウザのアドレスバーを確認してください。秘密鍵やシードフレーズを入力させようとするサイトは100%詐欺です。
+      </div>
+    </section>
+
+    <section id="install-extension">
+      <h2>ブラウザ拡張機能をインストールする手順は？</h2>
+      <p class="summary-box">ブラウザ拡張機能版はパソコンでのdApps利用に最適です。Chrome／Brave／Firefox／Edge のいずれでも、所要時間は3〜5分です。</p>
+
+      <ol class="steps">
+        <li><strong>公式サイトにアクセス</strong>アドレスバーに <code>metamask.io</code> と直接入力します。検索結果ではなくURLを直接入力するのが最も安全です。</li>
+        <li><strong>「Download」ボタンを選択</strong>利用しているブラウザが自動検出され、対応するストアへのリンクが表示されます。</li>
+        <li><strong>ストアで「追加」または「インストール」</strong>Chromeの場合は「Chromeに追加」、Firefoxの場合は「Firefoxへ追加」を選択します。権限の確認ダイアログが表示されたら内容を読み「拡張機能を追加」を押します。</li>
+        <li><strong>ピン留め（任意だが推奨）</strong>ブラウザ右上のパズルアイコンから MetaMask の横にあるピンマークを押すと、ツールバーに常時表示されます。誤って類似ロゴをクリックしないために、追加直後にピン留めしてください。</li>
+        <li><strong>初回起動</strong>追加完了画面または狐のアイコンをクリックすると、ウォレット作成のセットアップ画面に遷移します。次の章に進みます。</li>
+      </ol>
+
+      <div class="callout callout--warning" role="note">
+        <strong>拡張機能の正規性チェック</strong>
+        ストアページに記載されたユーザー数、評価件数、開発元名（MetaMask）を必ず確認してください。同名の偽拡張機能がストアに紛れている事例が過去に報告されています。
+      </div>
+    </section>
+
+    <section id="install-mobile">
+      <h2>モバイルアプリをインストールする手順は？</h2>
+      <p class="summary-box">外出先でも残高確認や送金を行いたい場合、モバイルアプリは欠かせません。拡張機能と同じシードフレーズで同期できるため、両方をインストールしておくと利便性が高まります。</p>
+
+      <h3>iOS（iPhone / iPad）</h3>
+      <ol class="steps">
+        <li><strong>App Storeを開く</strong>ホーム画面のApp Storeアプリを起動します。</li>
+        <li><strong>「MetaMask」で検索</strong>検索欄に「MetaMask」と入力し、提供元が <em>ConsenSys Software Inc.</em> となっているアプリを選びます。</li>
+        <li><strong>入手をタップ</strong>Face ID／Touch ID／Apple IDのパスワードで認証してダウンロードを開始します。</li>
+        <li><strong>アプリを起動</strong>ホーム画面に追加された狐アイコンをタップして初期セットアップに進みます。</li>
+      </ol>
+
+      <h3>Android</h3>
+      <ol class="steps">
+        <li><strong>Google Playを開く</strong>Playストアを起動します。</li>
+        <li><strong>「MetaMask」で検索</strong>提供元 <em>ConsenSys Software Inc.</em> のアプリを選択します。</li>
+        <li><strong>「インストール」をタップ</strong>必要な権限の確認後、自動的にダウンロードとインストールが進みます。</li>
+        <li><strong>アプリを起動</strong>「開く」ボタン、またはランチャーから狐アイコンをタップして初期化を開始します。</li>
+      </ol>
+
+      <div class="callout callout--info" role="note">
+        <strong>APKファイルの直接インストールは推奨しません</strong>
+        AndroidではAPKを外部から取得してインストールすることも技術的には可能ですが、改ざんされたバイナリを掴むリスクがあるためGoogle Play経由を強く推奨します。
+      </div>
+    </section>
+
+    <section id="initial-setup">
+      <h2>ウォレット作成と初期設定の流れは？</h2>
+      <p class="summary-box">初回起動では「新規ウォレットを作成」と「既存ウォレットをインポート」の選択画面が表示されます。新しく始める場合は前者を選びます。</p>
+
+      <ol class="steps">
+        <li><strong>「新しいウォレットを作成」を選択</strong>既存のシードフレーズを所有していない場合はこちらを選びます。</li>
+        <li><strong>利用規約・プライバシーポリシーを確認</strong>本文を読んだうえで同意します。改善のための匿名データ送信の可否はあとから設定で変更できます。</li>
+        <li><strong>パスワードを設定</strong>これは端末ローカルでウォレットを暗号化するためのパスワードで、メタマスク ログイン時に毎回求められます。<strong>シードフレーズとは別物</strong>であり、忘れた場合はシードフレーズで再復元できます。8文字以上、推測されにくい英数字記号の組み合わせを使ってください。</li>
+        <li><strong>シードフレーズを表示</strong>12個の英単語が画面に表示されます。この時点で表示された単語列が、あなたのウォレットそのものです。</li>
+        <li><strong>シードフレーズを書き写す</strong>必ず<strong>紙にペンで</strong>書き写し、順序を維持したまま物理的に保管します。スクリーンショット、クラウドストレージ、メールへの貼り付けは厳禁です。</li>
+        <li><strong>確認テスト</strong>シードフレーズを正しく記録したかどうか、画面の指示に従って一部を再入力する確認テストが行われます。</li>
+        <li><strong>セットアップ完了</strong>ウォレットアドレス（0xから始まる42文字）が割り当てられ、残高ゼロのウォレットが利用可能になります。</li>
+      </ol>
+    </section>
+
+    <section id="seed-phrase">
+      <h2>シードフレーズはどう保管すべきか？</h2>
+      <p class="summary-box">シードフレーズはあなたの資産そのものへのマスターキーであり、これを失う＝資産を失うことを意味します。同時に、誰かに見られた瞬間に資産を盗まれることも意味します。</p>
+
+      <h3>推奨される保管方法</h3>
+      <ul>
+        <li>耐火金庫の中に紙で保管する。</li>
+        <li>金属プレート（クリプトスチールなど）に刻印して水・火災・経年劣化に備える。</li>
+        <li>同じフレーズを物理的に離れた2か所に分散して保管する（火災・盗難に対する冗長化）。</li>
+      </ul>
+
+      <h3>絶対にやってはいけない保管方法</h3>
+      <div class="callout callout--danger" role="note">
+        <strong>禁止事項</strong>
+        <ul>
+          <li>iCloud / Googleドライブ / Dropbox / Notion / Evernote / メモアプリへの保存</li>
+          <li>メール下書き・自分宛てメッセージ・LINE Keepへの貼り付け</li>
+          <li>スマホでスクリーンショットを撮ること</li>
+          <li>誰かに口頭、メッセージ、ビデオ通話で伝えること（公式サポートを名乗る人物含め、誰であっても）</li>
+        </ul>
+      </div>
+
+      <h3>サポートを装う詐欺の典型パターン</h3>
+      <p>SNSやDiscord、Telegramで「公式サポート」を名乗るアカウントから声をかけられ、「同期のためにシードフレーズを入力してください」と誘導されるケースは2024〜2026年にかけて急増しています。<strong>正規のメタマスク サポートはシードフレーズを尋ねません。</strong>例外なく詐欺と判断してください。</p>
+    </section>
+
+    <section id="login">
+      <h2>メタマスク ログインはどう行うのか？</h2>
+      <p class="summary-box">メタマスク ログインとは、初回設定時に決めたローカルパスワードを入力して、暗号化されたウォレットを端末上で復号する操作のことです。シードフレーズを毎回入力する必要はありません。</p>
+
+      <h3>拡張機能でのログイン</h3>
+      <ol class="steps">
+        <li>ブラウザ右上の狐アイコンをクリックします。</li>
+        <li>パスワード入力欄が表示されたら、初期設定で決めたパスワードを入力します。</li>
+        <li>「ロック解除」を押すと、残高画面に遷移します。</li>
+      </ol>
+
+      <h3>モバイルアプリでのログイン</h3>
+      <ol class="steps">
+        <li>ホーム画面から狐アイコンをタップしてアプリを開きます。</li>
+        <li>パスワードを入力するか、設定で生体認証を有効にしている場合は Face ID／指紋認証で解除します。</li>
+        <li>残高画面が表示されればログイン完了です。</li>
+      </ol>
+
+      <h3>パスワードを忘れた場合は？</h3>
+      <p>パスワードはシードフレーズを使えばリセットできます。アプリまたは拡張機能の「ウォレットをリセット／復元」を選び、12単語のシードフレーズを正しい順序で入力してから新しいパスワードを設定してください。シードフレーズも紛失している場合は、残念ながら復元手段はありません。これがノンカストディアルウォレットの原則です。</p>
+    </section>
+
+    <section id="safety">
+      <h2>安全に利用するための注意点は何か？</h2>
+      <p class="summary-box">ウォレットそのものを安全に作成しても、接続先のサイトや署名する取引内容を確認しないと資産は守れません。最終防衛線は常にユーザー自身です。</p>
+
+      <ul>
+        <li><strong>接続先のドメインを毎回確認する。</strong>署名画面に表示されるサイトのドメインがブックマークしている公式と一致しているかを確認します。</li>
+        <li><strong>署名する内容を理解する。</strong>「Approve」「setApprovalForAll」など、無制限の引き出し権限を与える署名はとくに慎重に扱います。不要な許可は <a href="https://revoke.cash" rel="noopener noreferrer external" target="_blank">revoke.cash</a> などで定期的に取り消します。</li>
+        <li><strong>大きな金額にはハードウェアウォレットを併用する。</strong>Ledger や Trezor をメタマスクと連携させると、署名を物理デバイスのボタンで承認する仕組みになり、PCがマルウェアに感染しても秘密鍵は外部に漏れません。</li>
+        <li><strong>ブラウザ拡張機能の追加には特に慎重に。</strong>悪意のある拡張機能はクリップボードを書き換えて送金先アドレスをすり替えることがあります。新しい拡張機能を入れる前に評価・レビュー・開発元を必ず確認します。</li>
+        <li><strong>OSとブラウザを最新に保つ。</strong>ゼロデイ脆弱性経由の攻撃を避けるため、自動更新を有効にしておきます。</li>
+      </ul>
+    </section>
+
+    <section id="faq" class="faq">
+      <h2>よくある質問</h2>
+
+      <details>
+        <summary>メタマスクの利用は無料ですか？</summary>
+        <div class="faq-body">
+          <p>メタマスクのインストールおよびウォレット作成自体は無料です。ブロックチェーン上で送金や取引を行う際にネットワーク手数料（ガス代）が発生し、メタマスク内蔵のスワップ機能を利用する場合は別途サービス手数料が上乗せされます。これらは利用前に画面で確認できます。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>拡張機能とモバイルアプリは同じシードフレーズで同期できますか？</summary>
+        <div class="faq-body">
+          <p>同じシードフレーズで「インポート」することで同期できます。一方の端末で生成したシードフレーズを、もう一方の端末で「既存ウォレットをインポート」から入力すれば、同一のアドレスと残高にアクセスできます。アプリ間の自動同期ではなく、決定論的な鍵生成によって同じアドレスが導出される仕組みです。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>シードフレーズを画面で見せれば家族と共有しても大丈夫ですか？</summary>
+        <div class="faq-body">
+          <p>共有相手の信頼度に関わらず、画面で見せた瞬間にスクリーンショットや写真撮影のリスクが生じます。共有が必要な相続・贈与の場面では、紙に書いたフレーズを耐火金庫または信頼できる弁護士・税理士のもとで保管する物理的な手段を選んでください。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>メタマスク ログインができなくなった場合の最終手段は？</summary>
+        <div class="faq-body">
+          <p>パスワードを忘れた場合はシードフレーズで復元、シードフレーズも失った場合は復元手段がありません。これは欠陥ではなく、ノンカストディアルウォレットの根本仕様です。だからこそ、シードフレーズの物理保管は最初の数分で必ず完結させてください。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>複数のアカウントを1つのメタマスクで管理できますか？</summary>
+        <div class="faq-body">
+          <p>同一シードフレーズから派生する複数のアカウント（アドレス）を「アカウント追加」から作成できます。用途別（保管用、取引用、テストネット用など）に分けると整理しやすくなります。シードフレーズが1つでもアドレスは複数持てるのが特徴です。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>取引所のアプリとメタマスクの違いは何ですか？</summary>
+        <div class="faq-body">
+          <p>取引所は運営者が秘密鍵を管理する「カストディアル」、メタマスクは利用者本人が管理する「ノンカストディアル」です。取引所は法定通貨との売買や本人確認による復元が可能で、メタマスクはdAppsへの接続や自己責任での自由度が強みです。両者は競合ではなく、目的に応じて使い分けるのが標準的です。</p>
+        </div>
+      </details>
+    </section>
+
+    <aside id="about-author" class="author-bio" aria-label="著者情報">
+      <svg class="author-avatar" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true" focusable="false">
+        <circle cx="32" cy="32" r="32" fill="#fff7eb"/>
+        <circle cx="32" cy="26" r="11" fill="#F6851B"/>
+        <path d="M10 60 Q32 38 54 60 Z" fill="#F6851B"/>
+      </svg>
+      <div>
+        <h2>執筆者：佐藤 健一</h2>
+        <p class="author-meta">メタペイント編集部 リサーチエディター ／ 担当領域：Web3ウォレット・暗号資産・ブロックチェーンセキュリティ</p>
+        <p>2019年から暗号資産分野の編集業務に従事し、ウォレット・取引所・自己管理セキュリティに関する記事を継続的に執筆・検証している。本記事は2026年4月時点の公式ドキュメントと自身の検証環境（macOS 14 / Chrome / iPhone 15 / Pixel 8）での再現確認に基づいて作成。誤りや更新点は <a href="mailto:metapaint@gmail.com">metapaint@gmail.com</a> までご指摘ください。</p>
+        <p class="author-meta">プロフィール：<a href="https://github.com/metapaint" rel="noopener noreferrer external" target="_blank">GitHub</a> ／ <a href="https://x.com/realmetapaint" rel="noopener noreferrer external" target="_blank">X (旧Twitter)</a></p>
+      </div>
+    </aside>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__row" aria-label="サイト情報リンク">
+      <button type="button" class="linklike" data-open-dialog="terms-dialog" aria-haspopup="dialog">利用規約</button>
+      <button type="button" class="linklike" data-open-dialog="privacy-dialog" aria-haspopup="dialog">プライバシーポリシー</button>
+      <a href="mailto:metapaint@gmail.com">お問い合わせ：metapaint@gmail.com</a>
+      <a href="https://github.com/metapaint" rel="noopener noreferrer external" target="_blank">GitHub</a>
+      <a href="https://x.com/realmetapaint" rel="noopener noreferrer external" target="_blank">X (旧Twitter)</a>
+      <a href="/sitemap.xml">サイトマップ</a>
+    </div>
+
+    <p class="legal-disclaimer">
+      <strong>免責事項：</strong>本サイトは独立した情報メディアであり、MetaMask 公式（ConsenSys Software Inc.）とは関係ありません。本記事は教育目的の一般的情報であり、投資助言ではありません。暗号資産の取り扱いはご自身の責任で行ってください。ダウンロードは必ず公式サイト metamask.io およびOS公式ストアから行ってください。
+    </p>
+
+    <p class="copy">© 2026 メタペイント編集部 / metapaint.github.io ・ All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Terms of Service modal (native <dialog>) -->
+<dialog id="terms-dialog" aria-labelledby="terms-title">
+  <div class="dialog-head">
+    <h2 id="terms-title">利用規約</h2>
+    <button type="button" class="dialog-close" data-close-dialog="terms-dialog" aria-label="利用規約を閉じる">×</button>
+  </div>
+  <div class="dialog-body">
+    <p>最終更新日：2026年4月25日</p>
+
+    <h3>1. 適用範囲</h3>
+    <p>本利用規約（以下「本規約」）は、メタペイント編集部（以下「当編集部」）が運営するウェブサイト metapaint.github.io（以下「本サイト」）の利用条件を定めるものです。本サイトを閲覧・利用される方（以下「利用者」）は、本規約に同意したものとみなします。</p>
+
+    <h3>2. コンテンツの目的と性質</h3>
+    <ul>
+      <li>本サイトのコンテンツは、Web3ウォレットおよび暗号資産分野に関する一般的かつ教育的情報の提供を目的としています。</li>
+      <li>本サイトは独立した情報メディアであり、MetaMask（ConsenSys Software Inc.）、各取引所、その他のサードパーティサービスの公式サイトではありません。</li>
+      <li>本サイトのコンテンツは、特定の投資・売買・運用に関する助言を構成するものではありません。</li>
+    </ul>
+
+    <h3>3. 自己責任原則</h3>
+    <p>暗号資産およびノンカストディアルウォレットの利用は、利用者自身の判断と責任において行ってください。シードフレーズや秘密鍵の紛失、誤送金、フィッシング被害、市場価格の変動による損失について、当編集部は一切の責任を負いません。</p>
+
+    <h3>4. 禁止事項</h3>
+    <ul>
+      <li>本サイトのコンテンツを無断で複製・転載・改変・販売する行為</li>
+      <li>本サイトの運営を妨害する行為（過度なクローリング、攻撃的アクセスなど）</li>
+      <li>本サイトの記述を悪用して第三者を欺く行為</li>
+      <li>当編集部または第三者の権利・名誉を侵害する行為</li>
+    </ul>
+
+    <h3>5. 知的財産権</h3>
+    <p>本サイトに掲載されている文章・画像・ロゴ・ソースコードに関する著作権その他の知的財産権は、当編集部または正当な権利者に帰属します。引用の範囲を超える利用には事前の書面による許諾が必要です。</p>
+
+    <h3>6. 外部リンク</h3>
+    <p>本サイトには第三者が運営する外部サイトへのリンクが含まれます。リンク先の内容、安全性、最新性については当編集部は保証しません。</p>
+
+    <h3>7. 免責事項</h3>
+    <ul>
+      <li>本サイトの情報の正確性・完全性・最新性については最大限の注意を払いますが、これを保証するものではありません。</li>
+      <li>各サービスの仕様変更、UI変更、機能追加・廃止により、記述と実際の挙動が異なる場合があります。</li>
+      <li>本サイトの利用または利用不能から生じた損害について、当編集部は一切の責任を負いません。</li>
+    </ul>
+
+    <h3>8. 規約の変更</h3>
+    <p>当編集部は、必要に応じて本規約を改定することがあります。重要な変更がある場合は本サイト上に掲示します。</p>
+
+    <h3>9. 準拠法および管轄</h3>
+    <p>本規約は日本法に準拠し、本サイトに関する紛争については東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+
+    <h3>10. お問い合わせ</h3>
+    <p>本規約に関するお問い合わせは <a href="mailto:metapaint@gmail.com">metapaint@gmail.com</a> までご連絡ください。</p>
+  </div>
+</dialog>
+
+<!-- Privacy Policy modal (native <dialog>) -->
+<dialog id="privacy-dialog" aria-labelledby="privacy-title">
+  <div class="dialog-head">
+    <h2 id="privacy-title">プライバシーポリシー</h2>
+    <button type="button" class="dialog-close" data-close-dialog="privacy-dialog" aria-label="プライバシーポリシーを閉じる">×</button>
+  </div>
+  <div class="dialog-body">
+    <p>最終更新日：2026年4月25日</p>
+
+    <h3>1. 基本方針</h3>
+    <p>メタペイント編集部（以下「当編集部」）は、利用者のプライバシー保護を重要な責務と考え、適用される個人情報保護法令およびガイドラインを遵守します。本ポリシーは、当編集部が運営するウェブサイト metapaint.github.io（以下「本サイト」）における個人情報および利用情報の取り扱いを定めるものです。</p>
+
+    <h3>2. 収集する情報</h3>
+    <ul>
+      <li><strong>お問い合わせ時：</strong>メールアドレス、お名前、ご連絡内容など、利用者が任意に提供される情報。</li>
+      <li><strong>アクセス情報：</strong>IPアドレス、ブラウザ種別、リファラ、閲覧ページ、滞在時間など、ブラウザが自動送信する情報。</li>
+      <li><strong>Cookie：</strong>本サイトはアクセス解析のために匿名化されたCookieを使用する場合があります。</li>
+    </ul>
+    <p>本サイトは秘密鍵、シードフレーズ、ウォレットアドレスを<strong>一切収集しません</strong>。これらの情報を求めるフォームは本サイトには存在しません。</p>
+
+    <h3>3. 利用目的</h3>
+    <ul>
+      <li>お問い合わせへの返信</li>
+      <li>本サイトの品質改善およびユーザー体験の向上</li>
+      <li>不正アクセス・スパムの検知および防止</li>
+      <li>法令または正当な要請に基づく対応</li>
+    </ul>
+
+    <h3>4. 第三者提供</h3>
+    <p>当編集部は法令に基づく場合を除き、利用者の同意なく個人情報を第三者に提供しません。</p>
+
+    <h3>5. 外部サービスとアクセス解析</h3>
+    <p>本サイトはアクセス解析や配信最適化のため、第三者の解析ツールを利用する場合があります。これらのツールは匿名化された統計情報を取得するもので、個人を特定する情報を含みません。利用者はブラウザ設定でCookieを無効化できます。</p>
+
+    <h3>6. データ保管期間</h3>
+    <p>お問い合わせメールは原則として返信完了後12か月間保管し、その後速やかに削除します。アクセスログは原則として最大26か月間保管します。</p>
+
+    <h3>7. 利用者の権利</h3>
+    <p>利用者は当編集部に対して、自己の個人情報の開示・訂正・削除・利用停止を請求できます。請求は <a href="mailto:metapaint@gmail.com">metapaint@gmail.com</a> までご連絡ください。本人確認のうえ、合理的な期間内に対応します。</p>
+
+    <h3>8. セキュリティ</h3>
+    <p>当編集部は個人情報への不正アクセス、紛失、改ざんを防止するため、技術的および組織的に合理的な安全管理措置を講じます。本サイトはHTTPSによる暗号化通信を提供します。</p>
+
+    <h3>9. 子どものプライバシー</h3>
+    <p>本サイトは13歳未満の子どもから個人情報を意図的に収集しません。誤って収集が判明した場合は速やかに削除します。</p>
+
+    <h3>10. ポリシーの変更</h3>
+    <p>本ポリシーは必要に応じて改定される場合があり、改定時は本サイトに掲示します。重要な変更については別途お知らせします。</p>
+
+    <h3>11. お問い合わせ窓口</h3>
+    <p>個人情報の取り扱いおよび本ポリシーに関するご質問は <a href="mailto:metapaint@gmail.com">metapaint@gmail.com</a> までお寄せください。</p>
+  </div>
+</dialog>
+
+<script>
+/* Minimal vanilla JS for native <dialog> open/close.
+   Native <dialog> already handles ESC, focus trap, and backdrop in modal mode. */
+(function () {
+  function openDialog(id) {
+    var dlg = document.getElementById(id);
+    if (!dlg) return;
+    if (typeof dlg.showModal === 'function') {
+      dlg.showModal();
+    } else {
+      dlg.setAttribute('open', '');
+    }
+  }
+  function closeDialog(id) {
+    var dlg = document.getElementById(id);
+    if (!dlg) return;
+    if (typeof dlg.close === 'function') {
+      dlg.close();
+    } else {
+      dlg.removeAttribute('open');
+    }
+  }
+  document.addEventListener('click', function (e) {
+    var openTarget = e.target.closest('[data-open-dialog]');
+    if (openTarget) {
+      e.preventDefault();
+      openDialog(openTarget.getAttribute('data-open-dialog'));
+      return;
+    }
+    var closeTarget = e.target.closest('[data-close-dialog]');
+    if (closeTarget) {
+      e.preventDefault();
+      closeDialog(closeTarget.getAttribute('data-close-dialog'));
+      return;
+    }
+    /* Click outside dialog content closes (preserves modal accessibility) */
+    if (e.target.tagName === 'DIALOG' && e.target.open) {
+      var rect = e.target.getBoundingClientRect();
+      var inside = e.clientY >= rect.top && e.clientY <= rect.bottom &&
+                   e.clientX >= rect.left && e.clientX <= rect.right;
+      if (!inside) e.target.close();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
