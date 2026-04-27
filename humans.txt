@@ -13,7 +13,7 @@ Location: 日本 / Japan
 Name: メタペイント編集部 (Metapaint Editorial)
 URL: https://metapaint.github.io/
 Mission: 初心者向けに正確で分かりやすいWeb3ウォレット導入ガイドを提供
-Last update: 2026-04-25
+Last update: 2026-04-27
 Doctype: HTML5
 Language: 日本語 (ja-JP)
 Standards: WCAG 2.2 AA, Schema.org / JSON-LD, Open Graph, Twitter Card, ISO 8601
